@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.app{
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  }
+
+  /* width */
+.headerScroll::-webkit-scrollbar {
+  width: 5px;
+  height: 3px;
+}
+
+/* Track */
+.headerScroll::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+.headerScroll::-webkit-scrollbar-thumb {
+  background: #020f1b;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.headerScroll::-webkit-scrollbar-thumb:hover {
+  background: #020f1b; 
+}

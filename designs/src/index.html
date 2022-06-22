@@ -1,0 +1,425 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/styles.css">
+  </head>
+  <body>
+<!-- header start -->
+<header class="w-full absolute block items-center z-20 top-0 left-0 right-0 overflow-y-auto max-h-screen lg:overflow-visible lg:max-h-full"
+>
+  <div
+  class="nav-top flex overflow-x-auto flex-nowrap  py-4 lg:flex-start items-center z-20 top-0 left-0 right-0 bg-opacity-20 border-b-2 border-secondary border-opacity-30 bg-secondary overflow-y-auto max-h-screen lg:overflow-visible lg:max-h-full"
+>
+  <div class="container max-w-7xl mx-auto">
+    <div class="row">
+      <div class="flex justify-between items-center text-secondary">
+        <p class="flex gap-x-3">
+          <span class="inline-flex whitespace-nowrap font-medium items-center px-4">
+            +1128 5255 8454
+            </span>
+          <span class="inline-flex whitespace-nowrap font-medium items-center px-4">
+            <span class="px-2">support@example.com</span></span
+          >
+        </p>
+        <p class="flex items-center gap-x-3">
+
+          <span class="inline-flex whitespace-nowrap font-medium items-center px-4">
+            <span class="px-2">Welcome to Mr.SEO Theme</span></span
+          >
+        </p>
+      </div>
+      <div class="col-md-6">
+        <ul class="social-icons">
+          <li>
+            <a class="facebook" href=""><i class="fa fa-facebook"></i></a>
+          </li>
+          <li>
+            <a class="twitter" href=""><i class="fa fa-twitter"></i></a>
+          </li>
+          <li>
+            <a class="google" href=""
+              ><i class="fa fa-google-plus"></i
+            ></a>
+          </li>
+          <li>
+            <a class="linkedin" href=""><i class="fa fa-linkedin"></i></a>
+          </li>
+          <li>
+            <a class="pinterest" href=""
+              ><i class="fa fa-pinterest"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- Navbar -->
+  <nav x-data="{ open: false }" class="nav-top flex flex-nowrap lg:flex-start items-center z-20 top-0 left-0 right-0 bg-white bg-opacity-20 overflow-y-auto max-h-screen lg:overflow-visible lg:max-h-full">
+    <div class="container mx-auto px-4 xl:max-w-6xl ">
+      <!-- mobile navigation -->
+      <div class="flex flex-row justify-between py-3">
+        <!-- logo -->
+        <a class="flex items-center py-2 text-xl" href="#">
+          <span class="text-4xl font-semibold">Tail<span class="text-blue-700">Pro.</span></span>
+          <!-- <img class="max-w-full h-auto" src="../src/img/logo.png" alt="Logo dark"> -->
+        </a>
+
+        <!-- menu -->
+        <ul class="hidden lg:flex flex-col lg:mx-auto mt-2 lg:flex-row lg:mt-0">
+          <li class="relative">
+            <!-- active -->
+            <a class="group block py-3 lg:py-7 px-6 text-secondary hover:text-secondary focus:text-secondary uppercase font-medium" href="#">
+              <span class="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-6 h-0.5 bg-blue-600 transition duration-700 ease-in-out opacity-100"></span>
+              Home
+            </a>
+          </li>
+
+          <!-- Insert desktop dropdown menu -->
+
+          <li class="relative">
+            <a class="group block py-3 lg:py-7 px-6 text-secondary hover:text-secondary focus:text-secondary uppercase font-medium" href="#">
+              <span class="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-6 h-0.5 bg-blue-600 transition duration-700 ease-in-out opacity-0 group-hover:opacity-100"></span>
+              About
+            </a>
+          </li>
+          <li class="relative">
+            <a class="group block py-3 lg:py-7 px-6 text-secondary hover:text-secondary focus:text-secondary uppercase font-medium" href="#">
+              <span class="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-6 h-0.5 bg-blue-600 transition duration-700 ease-in-out opacity-0 group-hover:opacity-100"></span>
+              Services
+            </a>
+          </li>
+        </ul>
+
+        <!-- navbar toggler -->
+        <div class="right-0 rtl:left-0 flex items-center">
+          <!-- Mobile menu button-->
+          <button id="navbartoggle" type="button" class="inline-flex items-center justify-center text-gray-800 hover:text-gray-700 focus:outline-none focus:ring-0" aria-controls="mobile-menu" @click="open = !open" aria-expanded="false" x-bind:aria-expanded="open.toString()">
+            <span class="sr-only">Mobile menu</span>
+            <svg x-description="Icon closed" x-state:on="Menu open" x-state:off="Menu closed" class="block h-8 w-8" :class="{ 'hidden': open, 'block': !(open) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+
+            <svg x-description="Icon open" x-state:on="Menu open" x-state:off="Menu closed" class="hidden h-8 w-8" :class="{ 'block': open, 'hidden': !(open) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div class="fixed w-full h-full inset-0 z-50" id="mobile-menu" x-description="Mobile menu" x-show="open" style="display: none;">
+        <!-- bg open -->
+        <span class="fixed bg-gray-900 bg-opacity-70 w-full h-full inset-x-0 top-0"></span>
+
+        <!-- Mobile navbar -->
+        <nav id="mobile-nav" class="flex flex-col right-0 rtl:left-0 w-64 fixed top-0 py-4 bg-white h-full overflow-auto z-40" x-show="open" @click.away="open=false" x-description="Mobile menu" role="menu" aria-orientation="vertical" aria-labelledby="navbartoggle"
+x-transition:enter="transform transition-transform duration-300"
+x-transition:enter-start="translate-x-full rtl:-translate-x-full"
+x-transition:enter-end="translate-x-0"
+x-transition:leave="transform transition-transform duration-300"
+x-transition:leave-start="translate-x-0"
+x-transition:leave-end="translate-x-full rtl:-translate-x-full">
+          <div class="mb-auto">
+            <!--logo-->
+            <div class="mh-18 text-center px-12 mb-8">
+              <a href="#" class="flex relative">
+                <span class="text-4xl font-semibold px-4">Tail<span class="text-blue-700">Pro.</span></span>
+                <!-- <img src="../src/img/logo.png" class="max-w-full h-auto" alt="logo"> -->
+                <span class="absolute -bottom-4 transform translate-x-1/2 w-20 h-0 border-t-2 border-opacity-50 border-blue-700 mx-auto"></span>
+              </a>
+            </div>
+            <!--navigation-->
+            <div class="mb-4">
+              <nav class="relative flex flex-wrap items-center justify-between">
+                <ul id="side-menu" class="w-full float-none flex flex-col">
+                  <li class="relative">
+                    <a href="#" class="block py-3 px-4 hover:text-blue-700 focus:text-blue-700">Home</a>
+                  </li>
+
+                  <li class="relative">
+                    <a href="#" class="block py-3 px-4 hover:text-blue-700 focus:text-blue-700">About</a>
+                  </li>
+
+                  <!-- dropdown with submenu-->
+                  <li class="relative" x-data="{ open: false }" @keydown.escape.stop="open = false" @click.away="open = false">
+                    <a id="mobiledrop-04" class="block py-3 px-4 hover:text-blue-700 focus:text-blue-700" href="javascript:;" @click="open = !open" aria-haspopup="true" x-bind:aria-expanded="open" :class="{ 'text-blue-700': open }">
+                      Dropdown
+                      <!-- caret -->
+                      <span class="inline-block float-right rtl:float-left mt-1 pt-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="transform transition duration-300" :class="{ 'rotate-0' : open , '-rotate-90 rtl:rotate-90' : !open }" width=".8rem" height=".8rem" fill="currentColor" viewBox="0 0 512 512"><polyline points="112 184 256 328 400 184" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"/></svg>
+                      </span>
+                    </a>
+
+                    <!-- dropdown menu -->
+                    <ul class="block rounded rounded-t-none top-full z-50 py-0.5 text-left rtl:text-right bg-white mb-4" style="min-width: 12rem" x-description="Dropdown menu" x-show="open" role="menu" aria-orientation="vertical" aria-labelledby="mobiledrop-04">
+                      <!--submenu-->
+                      <li class="relative" x-data="{ open: false }" @keydown.escape.stop="open = false" @click.away="open = false">
+                        <a id="sidemenu-01" class="block w-full py-2 px-6 clear-both whitespace-nowrap hover:text-blue-700" href="javascript:;" @click="open = !open" aria-haspopup="true" x-bind:aria-expanded="open" :class="{ 'text-blue-700': open }">
+                          Dropdown Item
+                          <!-- caret -->
+                          <span class="inline-block float-right rtl:float-left mt-1 pt-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="transform transition duration-300" :class="{ 'rotate-0' : open , '-rotate-90 rtl:rotate-90' : !open }" width=".8rem" height=".8rem" fill="currentColor" viewBox="0 0 512 512"><polyline points="112 184 256 328 400 184" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"/></svg>
+                          </span>
+                        </a>
+
+                        <!--dropdown submenu-->
+                        <ul class="block rounded rounded-t-none top-full z-50 ml-3 rtl:mr-3 py-0.5 text-left rtl:text-right bg-white" style="min-width: 12rem" x-description="Dropdown menu" x-show="open" role="menu" aria-orientation="vertical" aria-labelledby="sidemenu-01">
+                          <li><a class="block w-full py-2 px-6 clear-both whitespace-nowrap hover:text-blue-700" href="#">Dropdown sub item</a></li>
+                          <li><a class="block w-full py-2 px-6 clear-both whitespace-nowrap hover:text-blue-700" href="#">Dropdown sub item</a></li>
+                          <li><a class="block w-full py-2 px-6 clear-both whitespace-nowrap hover:text-blue-700" href="#">Dropdown sub item</a></li>
+                          <li><a class="block w-full py-2 px-6 clear-both whitespace-nowrap hover:text-blue-700" href="#">Dropdown sub item</a></li>
+                        </ul>
+                      </li><!--end submenu-->
+
+                      <!--submenu-->
+                      <li class="relative" x-data="{ open: false }" @keydown.escape.stop="open = false" @click.away="open = false">
+                        <a id="sidemenu-02" class="block w-full py-2 px-6 clear-both whitespace-nowrap hover:text-blue-700" href="javascript:;" @click="open = !open" aria-haspopup="true" x-bind:aria-expanded="open" :class="{ 'text-blue-700': open }">
+                          Dropdown item
+                          <!-- caret -->
+                          <span class="inline-block float-right rtl:float-left mt-1 pt-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="transform transition duration-300" :class="{ 'rotate-0' : open , '-rotate-90 rtl:rotate-90' : !open }" width=".8rem" height=".8rem" fill="currentColor" viewBox="0 0 512 512"><polyline points="112 184 256 328 400 184" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"/></svg>
+                          </span>
+                        </a>
+
+                        <!--dropdown submenu-->
+                        <ul class="block rounded rounded-t-none top-full z-50 ml-3 rtl:mr-3 py-0.5 text-left rtl:text-right bg-white" style="min-width: 12rem" x-description="Dropdown menu" x-show="open" role="menu" aria-orientation="vertical" aria-labelledby="sidemenu-02">
+                          <li><a class="block w-full py-2 px-6 clear-both whitespace-nowrap hover:text-blue-700" href="#">Dropdown sub item</a></li>
+                          <li><a class="block w-full py-2 px-6 clear-both whitespace-nowrap hover:text-blue-700" href="#">Dropdown sub item</a></li>
+                          <li><a class="block w-full py-2 px-6 clear-both whitespace-nowrap hover:text-blue-700" href="#">Dropdown sub item</a></li>
+                        </ul>
+                      </li><!--end submenu-->
+
+                      <!--submenu-->
+                      <li class="relative" x-data="{ open: false }" @keydown.escape.stop="open = false" @click.away="open = false">
+                        <a id="sidemenu-03" class="block w-full py-2 px-6 clear-both whitespace-nowrap hover:text-blue-700" href="javascript:;" @click="open = !open" aria-haspopup="true" x-bind:aria-expanded="open" :class="{ 'text-blue-700': open }">
+                          Dropdown item
+                          <!-- caret -->
+                          <span class="inline-block float-right rtl:float-left mt-1 pt-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="transform transition duration-300" :class="{ 'rotate-0' : open , '-rotate-90 rtl:rotate-90' : !open }" width=".8rem" height=".8rem" fill="currentColor" viewBox="0 0 512 512"><polyline points="112 184 256 328 400 184" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"/></svg>
+                          </span>
+                        </a>
+
+                        <!--dropdown submenu-->
+                        <ul class="block rounded rounded-t-none top-full z-50 ml-3 rtl:mr-3 py-0.5 text-left rtl:text-right bg-white" style="min-width: 12rem" x-description="Dropdown menu" x-show="open" role="menu" aria-orientation="vertical" aria-labelledby="sidemenu-03">
+                          <li><a class="block w-full py-2 px-6 clear-both whitespace-nowrap hover:text-blue-700" href="#">Dropdown sub item</a></li>
+                          <li><a class="block w-full py-2 px-6 clear-both whitespace-nowrap hover:text-blue-700" href="#">Dropdown sub item</a></li>
+                        </ul>
+                      </li><!--end submenu-->
+                    </ul>
+                  </li>
+
+                  <li class="relative">
+                    <a href="#" class="block py-3 px-4 hover:text-blue-700 focus:text-blue-700">Services</a>
+                  </li>
+                  <li class="relative">
+                    <a href="#" class="block py-3 px-4 hover:text-blue-700 focus:text-blue-700">Support</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <!-- copyright -->
+          <div class="mt-5 text-center">
+            <p>Copyright <a href="#">TailPro</a> - All right reserved</p>
+          </div>
+        </nav>
+      </div><!-- End Mobile menu -->
+    </div>
+  </nav><!-- End Navbar -->
+</header><!-- header end -->
+  <!--hero-->
+
+        
+  <div class="max-w-full min-h-full xl:min-h-[100vh] h-auto relative bg-primary flex justify-center items-center">
+    <div class="grid grid-cols-1 gap-x-8 items-center px-16 min-h-[40vh] md:grid-cols-2 pt-[22vh] pb-[10vh]">
+      <div>
+      <h1 class="text-white text-4xl md:text-6xl font-bold my-4">Learning to<br/>grow together</h1>
+      <p class="text-gray-300 max-w-md">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+      </div>
+      <div class="max-w-full">
+      <img src="assets/photos/header-img.png" class="object-contain" width="400" height="400">
+      </div>
+    </div>
+
+</div>
+
+<!--services-->
+<section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="text-center mb-20">
+      <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4"><strong>A Celebration</strong> <span class="italic font-normal">of Success</span></h1>
+      <div class="flex mt-6 justify-center">
+        <div class="w-16 h-1 rounded-full bg-primary inline-flex"></div>
+      </div>
+    </div>
+    <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
+      <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+        <div class="w-20 h-20 inline-flex items-center transition-all transform translate-y-0 hover:-translate-y-6 justify-center rounded-full text-blue-500 mb-5 flex-shrink-0">
+          <img style="display: block;" src="assets/photos/dummy-icon.png">
+       
+          
+        </div>
+        <div class="flex-grow">
+          <h2 class="text-gray-900 text-2xl title-font font-medium mb-3">Shooting Stars</h2>
+          <p class="text-gray-500 leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS try-hard.</p>
+          
+        </div>
+      </div>
+      <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+        <div class="w-20 h-20 inline-flex items-center transition-all transform translate-y-0 hover:-translate-y-6 justify-center rounded-full text-blue-500 mb-5 flex-shrink-0">
+          <img style="display: block;" src="assets/photos/dummy-icon.png">
+       
+          
+        </div>
+        <div class="flex-grow">
+          <h2 class="text-gray-900 text-2xl title-font font-medium mb-3">Shooting Stars</h2>
+          <p class="text-gray-500 leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS try-hard.</p>
+  
+        </div>
+      </div>
+      <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+        <div class="w-20 h-20 inline-flex items-center transition-all transform translate-y-0 hover:-translate-y-6 justify-center rounded-full text-blue-500 mb-5 flex-shrink-0">
+          <img style="display: block;" src="assets/photos/dummy-icon.png">
+       
+          
+        </div>
+        <div class="flex-grow">
+          <h2 class="text-gray-900 text-2xl title-font font-medium mb-3">Shooting Stars</h2>
+          <p class="text-gray-500 leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS try-hard.</p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--processes-->
+<section class="relative bg-white">
+  <div class="w-full flex flex-col justify-center md:flex-row relative px-4">
+    <div class="relative min-h-[50vh] w-1/5 mx-auto">
+      <div class="absolute md:bottom-0 w-full">
+      <img class="mx-auto" src="assets/photos/h1-process-image-1.png">
+      <h4 class="text-lg font-semibold my-2 text-center">Text</h4>
+
+      </div>
+    </div>
+    <div class="relative min-h-[50vh] w-1/5 mx-auto">
+      <div class="absolute md:top-0 w-full">
+      <img class="mx-auto" src="assets/photos/h1-process-image-1.png">
+      <h4 class="text-lg font-semibold my-2 text-center">Text</h4>
+
+      </div>
+    </div>
+    <div class="relative min-h-[50vh] w-1/5 mx-auto">
+      <div class="absolute md:bottom-0 w-full">
+      <img class="mx-auto" src="assets/photos/h1-process-image-1.png">
+      <h4 class="text-lg font-semibold my-2 text-center">Text</h4>
+
+      </div>
+    </div>
+    <div class="relative min-h-[50vh] w-1/5 mx-auto">
+      <div class="absolute md:top-0 w-full">
+      <img class="mx-auto" src="assets/photos/h1-process-image-1.png">
+      <h4 class="text-lg font-semibold my-2 text-center">Text</h4>
+      </div>
+    </div>
+    <div class="relative min-h-[50vh] w-1/5 mx-auto">
+      <div class="absolute md:bottom-0 w-full">
+      <img class="mx-auto" src="assets/photos/h1-process-image-1.png">
+      <h4 class="text-lg font-semibold my-2 text-center">Text</h4>
+
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!--blog-->
+<!-- blogs start -->
+<div id="blogs" class="relative pt-20 pb-8 md:pt-24 md:pb-12 bg-white">
+  <div class="container xl:max-w-6xl mx-auto px-4">
+    <!-- section header -->
+    <header class="text-center mx-auto mb-12">
+      <h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-gray-800"><span class="font-light">From the</span> Blog</h2>
+      <hr class="block w-12 h-0.5 mx-auto my-5 bg-blue-700 border-blue-700">
+    </header><!-- end section header -->
+
+    <!-- row -->
+    <div class="flex flex-wrap flex-row justify-center -mx-4">
+      <div class="flex-shrink w-11/12 max-w-full md:w-1/2 lg:w-1/3 px-4">
+        <!-- Card -->
+        <div class="flex flex-col bg-white mb-12 rounded overflow-hidden wow fadeInUp" data-wow-duration="1s">
+          <div class="relative overflow-hidden">
+            <a href="#">
+              <img class="max-w-full h-auto duration-700 transform hover:scale-110" src="https://mrseo.qodeinteractive.com/wp-content/uploads/2017/02/b-post-image-1.jpg" alt="alt title">
+            </a>
+          </div>
+          <div class="pt-6 flex-1">
+            <div class="mb-2">
+              <h3 class="text-2xl md:text-xl leading-normal md:leading-normal mb-4 font-semibold text-gray-800"><a href="#" class="hover:text-blue-700">New web design layout trends in 2021</a></h3>
+              <div class="text-gray-600">
+                <svg class="bi bi-calendar ltr:mr-2 rtl:ml-2 inline-block" width=".8rem" height=".8rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M14 0H2a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V2a2 2 0 00-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z" clip-rule="evenodd"></path>
+                    <path fill-rule="evenodd" d="M6.5 7a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
+                  </svg><span>04 May 2020</span>
+              </div>
+            </div>
+            <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore ducimus est, excepturi nam odit possimus.</p>
+          </div>
+        </div><!-- End card -->
+      </div>
+
+      <div class="flex-shrink w-11/12 max-w-full md:w-1/2 lg:w-1/3 px-4">
+        <!-- Card -->
+        <div class="flex flex-col bg-white mb-12 rounded overflow-hidden wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+          <div class="relative overflow-hidden">
+            <a href="#">
+              <img class="max-w-full h-auto duration-700 transform hover:scale-110" src="https://mrseo.qodeinteractive.com/wp-content/uploads/2017/02/b-post-image-2.jpg" alt="alt title">
+            </a>
+          </div>
+          <div class="pt-6 flex-1">
+           <div class="mb-2">
+              <h3 class="text-2xl md:text-xl leading-normal md:leading-normal mb-4 font-semibold text-gray-800"><a href="#" class="hover:text-blue-700">Tips and tricks for building a Startup Company</a></h3>
+              <div class="text-gray-600">
+                <svg class="bi bi-calendar ltr:mr-2 rtl:ml-2 inline-block" width=".8rem" height=".8rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M14 0H2a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V2a2 2 0 00-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z" clip-rule="evenodd"></path>
+                    <path fill-rule="evenodd" d="M6.5 7a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
+                  </svg><span>04 May 2020</span>
+              </div>
+            </div>
+            <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore ducimus est, excepturi nam odit possimus.</p>
+          </div>
+        </div><!-- end card -->
+      </div>
+
+      <div class="flex-shrink w-11/12 max-w-full md:w-1/2 lg:w-1/3 px-4">
+        <!-- Card -->
+        <div class="flex flex-col bg-white mb-12 rounded overflow-hidden wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+          <div class="relative overflow-hidden">
+            <a href="#">
+              <img class="max-w-full h-auto duration-700 transform hover:scale-110" src="https://mrseo.qodeinteractive.com/wp-content/uploads/2017/02/b-post-image-3.jpg" alt="alt title">
+            </a>
+          </div>
+          <div class="pt-6 flex-1">
+            <div class="mb-2">
+              <h3 class="text-2xl md:text-xl leading-normal md:leading-normal mb-4 font-semibold text-gray-800"><a href="#" class="hover:text-blue-700">Web Vitals will become SEO ranking signals in 2021</a></h3>
+              <div class="text-gray-600">
+                <svg class="bi bi-calendar ltr:mr-2 rtl:ml-2 inline-block" width=".8rem" height=".8rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M14 0H2a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V2a2 2 0 00-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z" clip-rule="evenodd"></path>
+                    <path fill-rule="evenodd" d="M6.5 7a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
+                  </svg><span>04 May 2020</span>
+              </div> 
+            </div>
+            <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore ducimus est, excepturi nam odit possimus.</p>
+          </div>
+        </div><!-- End card -->
+      </div>
+    </div><!-- end row -->
+  </div>
+</div><!-- end blogs -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.2/cdn.min.js" defer></script>
+
+  </body>
+
+</html>
